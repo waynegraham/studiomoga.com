@@ -13,93 +13,97 @@
     <title>moga studio</title>
   </head>
   <body>
-    <main class="site-shell">
-      <header class="site-header">
-        <a href="#" class="brand" aria-label="moga home">
-          <img src="/images/logo-mark.png" alt="moga symbol" class="brand-mark" eleventy:ignore />
-          <span class="brand-word">moga</span>
+    <main class="mx-auto min-h-screen max-w-[940px] bg-panel">
+      <header class="flex items-center justify-between gap-6 px-4 pt-[1.15rem] pb-[1.1rem] max-[930px]:flex-col max-[930px]:items-start max-[930px]:pt-4">
+        <a href="#" class="inline-flex items-center gap-[0.8rem]" aria-label="moga home">
+          <img src="/images/logo-mark.png" alt="moga symbol" class="h-auto w-[3.1rem]" eleventy:ignore />
+          <span class="font-serif text-[2rem] leading-none tracking-[0.52rem] lowercase max-sm:text-[1.65rem] max-sm:tracking-[0.35rem]">moga</span>
         </a>
         <nav aria-label="Primary">
-          <ul class="nav-list">
-            <li><a href="#" class="is-active">Home</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Offerings</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul class="m-0 flex list-none gap-[1.8rem] p-0 text-[0.82rem] tracking-[0.03rem] uppercase max-[930px]:flex-wrap max-[930px]:gap-y-4 max-[930px]:gap-x-[1.3rem]">
+            <li><a href="#" class="text-accent">Home</a></li>
+            <li><a href="#" class="hover:text-accent">Our Story</a></li>
+            <li><a href="#" class="hover:text-accent">Offerings</a></li>
+            <li><a href="#" class="hover:text-accent">Portfolio</a></li>
+            <li><a href="#" class="hover:text-accent">Contact</a></li>
           </ul>
         </nav>
       </header>
 
-      <section class="hero">
+      <section class="relative">
         <img
           src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg"
           alt="Hands shaping pottery on a wheel"
-          class="hero-image"
+          class="block h-[316px] w-full object-cover max-sm:h-[260px]"
           loading="eager"
           decoding="async"
           fetchpriority="high"
         />
-        <div class="hero-overlay">
-          <h1>moga studio</h1>
-          <p>where movement meets form.</p>
-          <a href="#" class="hero-cta">Explore Our Practice</a>
+        <div class="absolute inset-0 grid place-content-center gap-[0.85rem] bg-linear-to-b from-[rgba(20,18,15,0.22)] to-[rgba(20,18,15,0.28)] text-center text-paper">
+          <h1 class="m-0 text-[clamp(2.6rem,8vw,5.2rem)] leading-[0.95] font-bold text-shadow-[0_1px_3px_rgba(0,0,0,0.28)] max-sm:leading-[1.05]">moga studio</h1>
+          <p class="m-0 text-[clamp(1rem,2.25vw,2rem)] text-shadow-[0_1px_2px_rgba(0,0,0,0.2)]">where movement meets form.</p>
+          <a href="#" class="justify-self-center border border-[rgba(246,241,232,0.8)] bg-[rgba(66,54,39,0.28)] px-[1.05rem] py-[0.62rem] text-[0.88rem]">Explore Our Practice</a>
         </div>
       </section>
 
-      <section class="content-grid">
-        <div class="approach-col">
-          <h2 class="section-title with-dot">The moga Approach</h2>
+      <section class="grid grid-cols-[minmax(0,1fr)_320px] border-t border-line max-[930px]:grid-cols-1">
+        <div class="border-r border-line max-[930px]:border-r-0">
+          <h2 class="relative m-0 border-b border-line py-[0.95rem] pr-[1.05rem] pl-[2.9rem] text-[clamp(1.9rem,3vw,2.75rem)] leading-none before:absolute before:top-1/2 before:left-7 before:h-[0.53rem] before:w-[0.53rem] before:-translate-y-1/2 before:rounded-full before:bg-accent before:content-['']">
+            The moga Approach
+          </h2>
 
-          <article class="approach-item">
-            <img src="/images/jared-rice-xce530fBHrk-unsplash.jpg" alt="Yoga mats arranged in a calm studio" />
+          <article class="grid grid-cols-[226px_minmax(0,1fr)] gap-[1.2rem] border-b border-line px-[1.2rem] py-[1.35rem] max-sm:grid-cols-1">
+            <img src="/images/jared-rice-xce530fBHrk-unsplash.jpg" alt="Yoga mats arranged in a calm studio" class="h-[121px] w-full object-cover max-sm:h-auto" />
             <div>
-              <h3>grounded wellness</h3>
-              <p>
+              <h3 class="m-0 text-[2rem] leading-none lowercase">grounded wellness</h3>
+              <p class="mt-[0.52rem] mb-0 text-base leading-[1.2]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus repellendus, corporis accusamus ipsam, reprehenderit maiores rerum labore quidem omnis unde repudiandae inventore eum nihil asperiores consequuntur qui saepe fugit officiis?
               </p>
             </div>
           </article>
 
-          <article class="approach-item craft-row">
+          <article class="grid grid-cols-[minmax(0,1fr)_265px] gap-[1.2rem] border-b border-line px-[1.2rem] py-[1.35rem] max-sm:grid-cols-1">
             <div>
-              <h3>intentional craft</h3>
-              <p>
+              <h3 class="m-0 text-[2rem] leading-none lowercase">intentional craft</h3>
+              <p class="mt-[0.52rem] mb-0 text-base leading-[1.2]">
                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, eveniet quo. Deleniti illum in nesciunt quia enim doloribus placeat laudantium? Fuga tempore hic amet sed doloribus quibusdam quaerat necessitatibus quae.
               </p>
             </div>
-            <img src="/images/annie-spratt-TywjkDHf0Ps-unsplash.jpg" alt="Natural woven fabric sample" />
+            <img src="/images/annie-spratt-TywjkDHf0Ps-unsplash.jpg" alt="Natural woven fabric sample" class="h-[101px] w-full object-cover max-sm:h-auto" />
           </article>
         </div>
 
-        <aside class="notes-col">
-          <h2 class="section-title center-accent">Studio Notes</h2>
-          <div class="notes-grid">
-            <article class="note-card">
-              <img src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg" alt="Pottery shaping close-up" />
-              <h3>Finding Flow in the Studio</h3>
-              <p>Finding movement meets form.</p>
+        <aside class="pb-[1.3rem] max-[930px]:border-t max-[930px]:border-line">
+          <h2 class="relative m-0 border-b border-line px-[1.05rem] py-[0.95rem] text-center text-[clamp(1.9rem,3vw,2.75rem)] leading-none before:absolute before:top-1/2 before:left-5 before:h-[0.53rem] before:w-[0.53rem] before:-translate-y-1/2 before:rounded-full before:bg-accent before:content-[''] after:absolute after:top-1/2 after:right-5 after:h-[0.53rem] after:w-[0.53rem] after:-translate-y-1/2 after:rounded-full after:bg-accent after:content-['']">
+            Studio Notes
+          </h2>
+          <div class="grid grid-cols-3 gap-[0.7rem] px-4 pt-4 max-sm:grid-cols-1">
+            <article>
+              <img src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg" alt="Pottery shaping close-up" class="h-[67px] w-full object-cover" />
+              <h3 class="mt-[0.58rem] mb-0 text-[1.62rem] leading-[1.05]">Finding Flow in the Studio</h3>
+              <p class="mt-[0.45rem] mb-0 text-[1.24rem] leading-[1.15]">Finding movement meets form.</p>
             </article>
-            <article class="note-card">
-              <img src="/images/annie-spratt-TywjkDHf0Ps-unsplash.jpg" alt="Minimal still-life composition" />
-              <h3>The Art of Simplicity</h3>
-              <p>5oga moga studio mest foem.</p>
+            <article>
+              <img src="/images/annie-spratt-TywjkDHf0Ps-unsplash.jpg" alt="Minimal still-life composition" class="h-[67px] w-full object-cover" />
+              <h3 class="mt-[0.58rem] mb-0 text-[1.62rem] leading-[1.05]">The Art of Simplicity</h3>
+              <p class="mt-[0.45rem] mb-0 text-[1.24rem] leading-[1.15]">5oga moga studio mest foem.</p>
             </article>
-            <article class="note-card">
-              <img src="/images/jared-rice-xce530fBHrk-unsplash.jpg" alt="Simple pottery still-life" />
-              <h3>The Art of Simipleity</h3>
-              <p>moga moga studio</p>
+            <article>
+              <img src="/images/jared-rice-xce530fBHrk-unsplash.jpg" alt="Simple pottery still-life" class="h-[67px] w-full object-cover" />
+              <h3 class="mt-[0.58rem] mb-0 text-[1.62rem] leading-[1.05]">The Art of Simipleity</h3>
+              <p class="mt-[0.45rem] mb-0 text-[1.24rem] leading-[1.15]">moga moga studio</p>
             </article>
           </div>
         </aside>
       </section>
 
-      <footer class="site-footer">
-        <ul>
+      <footer class="bg-footer px-4 pt-4 pb-[0.8rem] text-center">
+        <ul class="m-0 flex list-none justify-center gap-[1.3rem] p-0 text-[0.73rem] uppercase">
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms</a></li>
           <li><a href="#">Social Media</a></li>
         </ul>
-        <p>&copy; 2026 moga studio. All Rights Reserved.</p>
+        <p class="mt-[0.7rem] mb-0 text-[0.86rem]">&copy; 2026 moga studio. All Rights Reserved.</p>
       </footer>
     </main>
   </body>
