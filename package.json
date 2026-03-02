@@ -1,0 +1,23 @@
+{
+  "name": "studiomoga.com",
+  "version": "1.0.0",
+  "description": "Minimalist portfolio website for Studio Moga, a design studio based in Toronto.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:eleventy\" \"npm run dev:tailwind\"",
+    "dev:eleventy": "eleventy --serve",
+    "dev:tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/styles/main.css --watch",
+    "build": "eleventy && tailwindcss -i ./src/styles/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1"
+  }
+}
