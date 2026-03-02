@@ -15,11 +15,37 @@
 body {
   margin: 0;
   color: var(--ink);
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
   background:
+    radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.22) 0, rgba(255, 255, 255, 0) 52%),
+    radial-gradient(circle at 82% 78%, rgba(255, 255, 255, 0.18) 0, rgba(255, 255, 255, 0) 48%),
+    repeating-linear-gradient(
+      32deg,
+      rgba(129, 106, 83, 0.028) 0,
+      rgba(129, 106, 83, 0.028) 2px,
+      rgba(255, 255, 255, 0) 2px,
+      rgba(255, 255, 255, 0) 9px
+    ),
+    repeating-linear-gradient(
+      -27deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0) 1px,
+      rgba(255, 255, 255, 0) 7px
+    ),
     radial-gradient(circle at 15% 12%, rgba(255, 255, 255, 0.5), transparent 50%),
     radial-gradient(circle at 88% 86%, rgba(255, 255, 255, 0.4), transparent 45%),
-    #ede7dd;
+    #ece5da;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nanum Myeongjo", serif;
 }
 
 a {
@@ -179,7 +205,7 @@ a {
 
 .approach-item p {
   margin: 0.52rem 0 0;
-  font-size: 1.38rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 

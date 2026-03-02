@@ -1,4 +1,5 @@
-import { promises as fs } from "fs";
+import fs from "fs";
+import { promises as fsp } from "fs";
 import path from "path";
 import { createRequire } from "module";
 import { compile } from "tailwindcss";
@@ -26,11 +27,11 @@ let buildTimer;
 let watchers = [];
 
 async function ensureInputFile() {
-  await fs.mkdir(path.dirname(INPUT_CSS), { recursive: true });
+  await fsp.mkdir(path.dirname(INPUT_CSS), { recursive: true });
   try {
-    await fs.access(INPUT_CSS);
+    await fsp.access(INPUT_CSS);
   } catch {
-    await fs.writeFile(INPUT_CSS, '@import "tailwindcss";\n', "utf8");
+    await fsp.writeFile(INPUT_CSS, '@import "tailwindcss";\n', "utf8");
   }
 }
 
@@ -58,7 +59,7 @@ async function walk(dirPath) {
   const files = [];
   let entries = [];
   try {
-    entries = await fs.readdir(dirPath, { withFileTypes: true });
+    entries = await fsp.readdir(dirPath, { withFileTypes: true });
   } catch {
     return files;
   }
@@ -78,7 +79,7 @@ async function collectCandidates() {
   const candidates = new Set();
   for (const filePath of files) {
     if (!extMatches(filePath)) continue;
-    const content = await fs.readFile(filePath, "utf8");
+    const content = await fsp.readFile(filePath, "utf8");
     for (const className of extractCandidates(content)) {
       candidates.add(className);
     }
@@ -94,7 +95,7 @@ async function runBuild() {
   isBuilding = true;
   try {
     await ensureInputFile();
-    const cssInput = await fs.readFile(INPUT_CSS, "utf8");
+    const cssInput = await fsp.readFile(INPUT_CSS, "utf8");
     const compiler = await compile(cssInput, {
       from: INPUT_CSS,
       base: ROOT,
@@ -114,7 +115,7 @@ async function runBuild() {
           resolvedPath = require.resolve(id, { paths: [importerBase, ROOT] });
         }
 
-        const content = await fs.readFile(resolvedPath, "utf8");
+        const content = await fsp.readFile(resolvedPath, "utf8");
         return {
           path: resolvedPath,
           base: path.dirname(resolvedPath),
@@ -124,8 +125,8 @@ async function runBuild() {
     });
     const candidates = await collectCandidates();
     const output = compiler.build(candidates);
-    await fs.mkdir(path.dirname(OUTPUT_CSS), { recursive: true });
-    await fs.writeFile(OUTPUT_CSS, output, "utf8");
+    await fsp.mkdir(path.dirname(OUTPUT_CSS), { recursive: true });
+    await fsp.writeFile(OUTPUT_CSS, output, "utf8");
     console.log(`[tailwind] Built ${path.relative(ROOT, OUTPUT_CSS)}`);
   } catch (error) {
     console.error("[tailwind] Build failed");

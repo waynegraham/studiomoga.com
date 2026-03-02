@@ -16,7 +16,7 @@
     <main class="site-shell">
       <header class="site-header">
         <a href="#" class="brand" aria-label="moga home">
-          <img src="/images/logo-mark.png" alt="moga symbol" class="brand-mark" />
+          <img src="/images/logo-mark.png" alt="moga symbol" class="brand-mark" eleventy:ignore />
           <span class="brand-word">moga</span>
         </a>
         <nav aria-label="Primary">
@@ -31,7 +31,14 @@
       </header>
 
       <section class="hero">
-        <img src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg" alt="Hands shaping pottery on a wheel" class="hero-image" />
+        <img
+          src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg"
+          alt="Hands shaping pottery on a wheel"
+          class="hero-image"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
         <div class="hero-overlay">
           <h1>moga studio</h1>
           <p>where movement meets form.</p>
@@ -68,17 +75,17 @@
           <h2 class="section-title center-accent">Studio Notes</h2>
           <div class="notes-grid">
             <article class="note-card">
-              <img src="/images/note-flow.jpg" alt="Pottery shaping close-up" />
+              <img src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg" alt="Pottery shaping close-up" />
               <h3>Finding Flow in the Studio</h3>
               <p>Finding movement meets form.</p>
             </article>
             <article class="note-card">
-              <img src="/images/note-simplicity.jpg" alt="Minimal still-life composition" />
+              <img src="/images/annie-spratt-TywjkDHf0Ps-unsplash.jpg" alt="Minimal still-life composition" />
               <h3>The Art of Simplicity</h3>
               <p>5oga moga studio mest foem.</p>
             </article>
             <article class="note-card">
-              <img src="/images/note-art.jpg" alt="Simple pottery still-life" />
+              <img src="/images/jared-rice-xce530fBHrk-unsplash.jpg" alt="Simple pottery still-life" />
               <h3>The Art of Simipleity</h3>
               <p>moga moga studio</p>
             </article>
