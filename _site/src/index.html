@@ -1,11 +1,99 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="/assets/styles.css">
-    </head>
-    <body>
-        <main class="mx-auto max-w-3xl px-6 py-16">
-            <h1 class="text-4xl font-bold tracking-tight">Welcome to my website!</h1>
-            <p class="mt-4 text-lg text-slate-700">This is a sample page using Nunjucks templating.</p>
-        </main>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>moga studio</title>
+  </head>
+  <body>
+    <main class="site-shell">
+      <header class="site-header">
+        <a href="#" class="brand" aria-label="moga home">
+          <img src="/images/logo-mark.png" alt="moga symbol" class="brand-mark" />
+          <span class="brand-word">moga</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="#" class="is-active">Home</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Offerings</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <img src="/images/jess-bailey-y7GlIdTUOvo-unsplash.jpg" alt="Hands shaping pottery on a wheel" class="hero-image" />
+        <div class="hero-overlay">
+          <h1>moga studio</h1>
+          <p>where movement meets form.</p>
+          <a href="#" class="hero-cta">Explore Our Practice</a>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="approach-col">
+          <h2 class="section-title with-dot">The moga Approach</h2>
+
+          <article class="approach-item">
+            <img src="/images/jared-rice-xce530fBHrk-unsplash.jpg" alt="Yoga mats arranged in a calm studio" />
+            <div>
+              <h3>grounded wellness</h3>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus repellendus, corporis accusamus ipsam, reprehenderit maiores rerum labore quidem omnis unde repudiandae inventore eum nihil asperiores consequuntur qui saepe fugit officiis?
+              </p>
+            </div>
+          </article>
+
+          <article class="approach-item craft-row">
+            <div>
+              <h3>intentional craft</h3>
+              <p>
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, eveniet quo. Deleniti illum in nesciunt quia enim doloribus placeat laudantium? Fuga tempore hic amet sed doloribus quibusdam quaerat necessitatibus quae.
+              </p>
+            </div>
+            <img src="/images/annie-spratt-TywjkDHf0Ps-unsplash.jpg" alt="Natural woven fabric sample" />
+          </article>
+        </div>
+
+        <aside class="notes-col">
+          <h2 class="section-title center-accent">Studio Notes</h2>
+          <div class="notes-grid">
+            <article class="note-card">
+              <img src="/images/note-flow.jpg" alt="Pottery shaping close-up" />
+              <h3>Finding Flow in the Studio</h3>
+              <p>Finding movement meets form.</p>
+            </article>
+            <article class="note-card">
+              <img src="/images/note-simplicity.jpg" alt="Minimal still-life composition" />
+              <h3>The Art of Simplicity</h3>
+              <p>5oga moga studio mest foem.</p>
+            </article>
+            <article class="note-card">
+              <img src="/images/note-art.jpg" alt="Simple pottery still-life" />
+              <h3>The Art of Simipleity</h3>
+              <p>moga moga studio</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="site-footer">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Social Media</a></li>
+        </ul>
+        <p>&copy; 2026 moga studio. All Rights Reserved.</p>
+      </footer>
+    </main>
+  </body>
 </html>
