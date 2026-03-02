@@ -4,10 +4,11 @@
   "description": "Minimalist portfolio website for Studio Moga, a design studio based in Toronto.",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev:eleventy\" \"npm run dev:tailwind\"",
+    "dev": "npm run build:css && concurrently \"npm run dev:eleventy\" \"npm run dev:css\"",
     "dev:eleventy": "eleventy --serve",
-    "dev:tailwind": "tailwindcss -i ./src/styles/main.css -o ./dist/styles/main.css --watch",
-    "build": "eleventy && tailwindcss -i ./src/styles/main.css"
+    "dev:css": "node ./scripts/tailwind-build.mjs --watch",
+    "build:css": "node ./scripts/tailwind-build.mjs",
+    "build": "npm run build:css && eleventy"
   },
   "keywords": [],
   "author": "",
