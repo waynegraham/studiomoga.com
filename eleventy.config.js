@@ -24,6 +24,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/images");
 
     return {
+        pathPrefix: "/studiomoga.com/",
         dir: {
             input: "src",
             output: "_site",
